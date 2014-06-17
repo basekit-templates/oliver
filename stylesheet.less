@@ -257,7 +257,7 @@ h5 {
     &.sticktobottom {
         display: block;
         float: left;
-        padding: 2.5em 0;
+        margin: 5em 0 1em;
         position: relative;
         @media @tablet {
             display: none;
@@ -606,6 +606,7 @@ nav {
             }
             &.content {
                 h2 {
+                    color: @color-swatch7;
                     padding: 0 0 5px 0;
                     @media @mobile {
                         font-size: bkscale(@font-swatch1-font-size, 0.85);
@@ -613,6 +614,7 @@ nav {
                     }
                 }
                 h3 {
+                    color: @color-swatch7;
                     @media @mobile {
                         font-size: bkscale(@font-swatch5-font-size, 0.94);
                     }
@@ -630,7 +632,6 @@ nav {
         overflow: hidden;
         height: auto;
         .feature-bgimg {
-            display: block;
             width: 100%;
             background-repeat: no-repeat;
             background-position: center center;
