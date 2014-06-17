@@ -38,17 +38,6 @@ body {
     }
 }
 
-body.edit { /* border for logo on editor */
-    .widget {
-        &.logo {
-            img {
-                border: 1px dashed red;
-                margin: 0 0 2px;
-            }
-        }
-    }
-}
-
 ::-moz-selection {
     background-color: fade(@color-swatch3, 65%);
 }
@@ -124,7 +113,7 @@ h5 {
     overflow-y: scroll;
     margin-left: 400px;
     padding-bottom: 40px;
-    padding-top: 30px;
+    padding-top: 40px;
     position: fixed;
     width: 65%; 
     @media @desktop {
@@ -197,6 +186,11 @@ h5 {
                 }
             }
         }  /* end companyname */
+        &.logo {
+            img {
+                max-width: 100%;
+            }
+        }
     } /* end widget */
     .cols {
         padding-left: 0;
