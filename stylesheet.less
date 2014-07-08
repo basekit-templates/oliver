@@ -129,7 +129,7 @@ h5 {
 .row { 
     *zoom: 1; 
     &:before {
-        content: " "; 
+        content: ""; 
         display: table; 
     }
     &:after {
@@ -656,7 +656,7 @@ nav {
     border-color: lighten(@color-swatch2, 10%);
     padding-bottom: 24px;
     span a {
-        background-color: fade(@color-swatch5, 10%);
+        background-color: darken(@color-swatch3, 80%);
         border-radius: 50px;
         -moz-border-radius: 50px;
         -webkit-border-radius: 50px;
@@ -829,8 +829,110 @@ nav {
    6. Ecommerce
    =============================== */
 
-.widget.ecomproductslist .ecom-productslist-image-wrap, .widget.ecomcheckout table tr td .checkout-quantitybtn, .widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrap {
-    background-color: @color-swatch7;
+.widget.ecomproductslist {
+    .productlist-display-form {
+        .form-group {
+            input.productlist-search, input.productlist-search + button.btn {
+                height: 45px;
+            }
+            label:after {
+                content: ":";
+                display: inline-block;
+                position: relative;
+            }
+            button {
+                position: relative;
+                left: -9px;
+            }
+        }
+    }
+    .ecom-productslist-image-wrap {
+        margin-bottom: 20px;
+    }
+    .ecom-productlist-info {
+        h2 {
+            padding-bottom: 5px;
+        }
+        span {
+            font-size: bkscale(@font-swatch2-font-size, 0.80);
+        }
+    }
+}
+
+.productlist-display-form, .productlist-item-count { 
+    select {
+        color: lighten(@font-swatch5-color, 15%);
+        font-size: bkscale(@font-swatch7-font-size, 0.85);
+        .border-radius(0);
+        height: 45px;
+        margin-left: 6px;
+        -webkit-appearance: none;
+        border: 1px solid lighten(@color-swatch7, 2%);
+        padding: 4px 35px 4px 12px;
+        background: image('/images/arrow-dropdown.png') 95% center no-repeat, @color-swatch7;
+        @media @tablet {
+            background-position: 98% center;
+            width: 100%;
+        }
+    }
+}
+
+.widget.ecomproduct {
+    h2 {
+        padding-bottom: 5px
+    }
+    .ecom-product-price {
+        color: lighten(@color-swatch5, 20%);
+        font-size: bkscale(@font-swatch5-font-size, 1.25);
+    }
+}
+
+.widget.ecomcheckout {
+    table {
+        margin-bottom: 40px;
+    }
+    table tr th, table tr td {
+        border-bottom: 1px solid fade(@color-swatch5, 15%);
+    }
+    a {
+        color: @font-swatch5-color;
+        font-size: bkscale(@font-swatch5-font-size, 1.1)
+    }
+    .checkout-pricepu {
+        color: lighten(@color-swatch5, 20%);
+    }
+}
+
+.delivery {
+    h3 {
+        padding-bottom: 25px;
+    }
+    input, textarea {
+        .border-radius(6px);
+    }
+    select {
+        color: lighten(@font-swatch5-color, 15%);
+        font-size: bkscale(@font-swatch7-font-size, 0.85);
+        .border-radius(0px);
+        height: 45px;
+        -webkit-appearance: none;
+        border: 2px solid lighten(@color-swatch7, 2%);
+        padding: 4px 35px 4px 12px;
+    }
+}
+
+.ecom-productslist-title, .ecom-featuredproducts-title, .ecom-product-title {
+    font-size: @font-swatch2-font-size;
+}
+
+.widget {
+    .ecomfeaturedproducts, .ecomcategorieslist, .checkout-form, {
+        margin: 1.5em 0;
+    }
+}
+
+.ecom-featuredproducts-header h2 {
+    padding-bottom: 25px;
 }
 
 /* ===============================
@@ -926,8 +1028,16 @@ input, textarea {
     font-size: bkscale(@font-swatch5-font-size, 0.95);
 }
 
+button.btn {
+    border-radius: 5px;
+}
+
 button.btn:hover {
     background-color: @font-swatch7-background-color-hover;
+}
+
+.contactform label {
+    padding-top: 10px;
 }
 
 .widget {
@@ -957,6 +1067,7 @@ button.btn:hover {
     &.signupform fieldset {
         button {
             height: 45px;
+            padding-top: 20px;
             position: relative;
         }
         input {
@@ -993,6 +1104,7 @@ button.btn:hover {
             height: 45px;
             position: relative;
             top: 2px;
+            
         }
     }
 }
