@@ -840,10 +840,11 @@ nav {
         margin-bottom: 1em;
         text-align: left;
         .form-group {
+          background-color: red;
           margin-right: 0.5em;
           margin-left: 0.5em;
           display: inline-block;
-          vertical-align: center;
+          vertical-align: left;
           @media @mobile {
             display: block;
             margin-bottom: 10px;
@@ -915,6 +916,11 @@ nav {
 }
 
 .ecombasket-checkout-link {
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
+}
+
+.checkout-empty-link {
     border-radius: 5px;
     box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
 }
