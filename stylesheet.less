@@ -422,7 +422,7 @@ nav {
             li {
                 float: left;
                 display: block;
-                padding: 6px 0;
+                padding: 0;
                 width: 100%;
                 @media @tablet {
                     float: none;
@@ -471,6 +471,12 @@ nav {
                     }
                 }
 
+                .text {
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    display: inline-block;
+                }
+
                 a {
                     display: block;
                     padding: 0 15px;
@@ -510,7 +516,7 @@ nav {
                     }
                     .text {
                         display: block;
-                        padding: 0 15px;
+                        padding: 6px 15px;
                         font-family: @font-swatch6-font-family;
                         font-size: @font-swatch6-font-size;
                         font-weight: @font-swatch6-font-weight;
@@ -534,8 +540,8 @@ nav {
                     }
                     ul {
                         padding: 0;
+                        margin: 0;
                         @media @tablet {
-                            margin-top: 8px;
                             left: 0;
                         }
                         li {
