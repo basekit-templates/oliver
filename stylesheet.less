@@ -777,6 +777,8 @@ nav {
    6. Ecommerce
    =============================== */
 
+
+
 .widget.ecomproductslist {
   .ecom-productslist-products {
     // Filter
@@ -849,6 +851,46 @@ nav {
   }
 }
 
+    // Select
+    .ecom-product-info .ecom-product-variation select {
+        display: block;
+        width: auto;
+        height: 35px;
+        margin-bottom: 12px;
+        padding: 8px 33px 8px 8px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: image('/images/select-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: 15px;
+        background-position-x: 93%;
+        background-position-y: 55%;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border: 1px solid lighten(@color-swatch1,60%);
+        text-indent: 0.01px;
+        text-overflow: '';
+        color: @color-swatch5;
+        cursor: pointer;
+        &:focus {
+            outline: 0;
+        }
+        @media @mobile {
+            width: 100%;
+        }
+        &::-ms-expand {
+            display: none;
+        }
+        &[name="displayCount"] {
+            margin-bottom: 0;
+        }
+    }
+
+.ecom-productslist-image-wrap {
+    background-color: lighten(@color-swatch1,60%);
+}
+
 .widget.ecombasket .ecombasket-pull {
     border-radius: 5px;
     box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
@@ -872,9 +914,9 @@ nav {
 
 .svg {
   .widget.ecomproductslist .ecom-productslist-products .productlist-filter .productlist-display-form .form-group select {
-    background-image: image('/images/ui-select-arrow.svg');
+    background-image: image('/images/ui-select-arrow.png');
     background-repeat: no-repeat;
-    background-size: 15px;
+    background-size: 7px;
     background-position-x: 93%;
     background-position-y: 55%;
   }
@@ -1084,11 +1126,12 @@ nav {
         }
     }
    .title, .description {
-        padding: 0;
+        padding: 10px 10px 13px;
+        color: @color-swatch7;
     }
     .content-wrapper {
         background: rgba(0,0,0,0.5);
-        padding: 10px 10px 5px;
+        
     }
     .slideshow-widget {
         /* Arrows */
@@ -1162,6 +1205,7 @@ nav {
 .blog-post-more-link a,
 .widget.ecombasket .ecombasket-pull,
 .ecombasket-checkout-link,
+.widget.button.paypal,
 .widget.ecomcheckout .checkout-order-button,
 .blog-list-footer a
  {
@@ -1172,7 +1216,7 @@ nav {
     font-weight: @font-swatch7-font-weight;
     color: @font-swatch7-color;
     letter-spacing: inherit;
-    padding: 5px 10px;
+    padding: 7px 10px;
     margin: 1em 0;
     text-decoration: none;
     height: 45px;
@@ -1189,6 +1233,7 @@ nav {
 input, textarea {
     background-color: @color-swatch7;
     font-size: bkscale(@font-swatch5-font-size, 0.95);
+    border-radius: 6px;
 }
 
 button.btn {
@@ -1207,6 +1252,7 @@ button.btn:hover {
     &.contactform {
         input, textarea {
             border: 1px solid fade(@color-swatch5, 25%);
+            border-radius: 6px;
             &.email {
                 @media @mobile {
                     width: 70%;
@@ -1269,7 +1315,7 @@ button.btn:hover {
             font-weight: @font-swatch7-font-weight;
             color: @font-swatch7-color;
             letter-spacing: inherit;
-            padding: 5px 10px;
+            padding: 7px 10px;
             margin: 1em 0;
             text-decoration: none;
             height: 45px;
