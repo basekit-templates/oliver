@@ -6,7 +6,7 @@
     <div class="three col">
         <header class="bk-header">
             <div class="contain">
-                {{widget('socialicons', 'social-icons')|raw}}
+                {{widget('profile', 'headericons', { 'profileType': 'socialicons' })|raw}}
                 <div class="companyheader">
                     {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
                     {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
