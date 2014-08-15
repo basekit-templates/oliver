@@ -237,6 +237,23 @@ h5 {
     }
 }
 
+.widget.companyname,
+.widget.logo {
+    @media @tablet {
+    display: inline-block;
+    vertical-align: middle;
+    }
+}
+
+.widget.socialicons span a {
+    border-radius: 50px;
+}
+
+.widget.tweet a {
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
+}
+
 .contain {
     padding: 0;
     margin-bottom: 50px;
@@ -810,7 +827,6 @@ nav {
           select {
             -moz-appearance: none;
             text-indent: 0.01px;
-            -webkit-appearance: none;
             text-overflow: '';
             cursor: pointer;
             position: relative;
@@ -834,7 +850,6 @@ nav {
             letter-spacing: 0;
             float: none;
             height: 41px;
-           background-image: image('/images/ui-select-arrow.png');
 
             @media @mobile {
               display: block;
@@ -912,15 +927,7 @@ nav {
     box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
 }
 
-.svg {
-  .widget.ecomproductslist .ecom-productslist-products .productlist-filter .productlist-display-form .form-group select {
-    background-image: image('/images/ui-select-arrow.png');
-    background-repeat: no-repeat;
-    background-size: 7px;
-    background-position-x: 93%;
-    background-position-y: 55%;
-  }
-}
+
 
 
 // Basket Summary
@@ -974,24 +981,26 @@ nav {
         }
         .quantity-number {
             position: relative;
-            top: -1px;
-            background-color: darken(@color-swatch1,3%);
-            padding: 1px 10px;
+            top: 1px;
+            border: solid 1px lighten(@color-swatch5,25%);;
+            padding: 5px 13px;
             font-size: 14px;
         }
         button {
-            width: 20px;
-            height: 20px;
+            width: 28px;
+            height: 28px;
             padding: 0;
             margin: 0;
             border: 0;
             box-shadow: none;
-            background-color: lighten(@color-swatch5,15%);
+            background-color: lighten(@color-swatch5,25%);
             font-size: 13px;
             font-family: @font-swatch4-font-family;
             color: @color-swatch1;
+            border-radius: 0;
+            margin-top: 8px;
             &:hover {
-                background-color: @color-swatch2;
+                background-color: lighten(@color-swatch5, 20%);
                 cursor: pointer;
             }
             &:focus {
@@ -1128,6 +1137,7 @@ nav {
    .title, .description {
         padding: 10px 10px 13px;
         color: @color-swatch7;
+        display: block;
     }
     .content-wrapper {
         background: rgba(0,0,0,0.5);
@@ -1223,6 +1233,7 @@ nav {
     position: relative;
     top: 2px;
     border-radius: 5px;
+    box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
     &:hover {
         background-color: @font-swatch7-background-color-hover;
         color: @color-swatch1;
