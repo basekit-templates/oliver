@@ -1,7 +1,6 @@
 {
     "name":"Oliver Thames",
     "thumbnail":"oliver.png",
-    "screenshot":"oliver.png",
     "templateType":"standard",
     "tags": {
     "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
@@ -57,7 +56,7 @@
         }
     },
     "fontSwatch": {
-       "title": "Merriweather",
+       "title": "Driod Sans",
         "font1": {
             "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
             "font-size": "34px",
