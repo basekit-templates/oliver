@@ -1,6 +1,7 @@
 {
     "name":"Oliver Thames",
     "thumbnail":"oliver.png",
+    "screenshot":"oliver-screenshot.jpg",
     "templateType":"standard",
     "images":["images/feature-img.jpg"],
     "pageTypes":["home"],
