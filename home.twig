@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="row container">
+<div class="row container home-page">
     <div class="three col">
         <header class="bk-header">
             <div class="contain">
@@ -15,13 +15,14 @@
             {% if pages|length > 1 %}
                 {{widget('extendednavigation', 'navigationheader', {})|raw}}
             {% endif %}
+            {{zone('main')|raw}}
             <div class="contain sticktobottom">
                 {{widget('content', 'contentfooter', {content: 'This is a content widget.', lines: 'all'})|raw}}
                 {{widget('button', 'feature-button', {text:'GET IN TOUCH' })|raw}}
                 <h5>{{widget('profile', 'copyright', { 'profileType': 'copyright' })|raw}}</h5>
             </div>
         </header>
-    </div> 
+    </div>
 </div>
 
 {% endblock %}
