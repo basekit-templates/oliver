@@ -1241,7 +1241,8 @@ nav {
 .ecombasket-checkout-link,
 .widget.button.paypal,
 .widget.ecomcheckout .checkout-order-button,
-.blog-list-footer a
+.blog-list-footer a,
+.advancedcontactform fieldset button
  {
     background-color: @font-swatch7-background-color;
     border: 0;
@@ -1278,12 +1279,14 @@ button.btn:hover {
     background-color: @font-swatch7-background-color-hover;
 }
 
-.contactform label {
+.contactform label,
+.advancedcontactform .form-group>label {
     padding-top: 10px;
 }
 
 .widget {
-    &.contactform {
+    &.contactform,
+    &.advancedcontactform {
         input, textarea {
             border: 1px solid fade(@color-swatch5, 25%);
             border-radius: 6px;
@@ -1358,6 +1361,16 @@ button.btn:hover {
 
         }
     }
+}
+
+.advancedcontactform form select {
+    background: @color-swatch7;
+    border: 1px solid fade(@color-swatch5, 25%);
+    height: 46px;
+}
+
+.advancedcontactform .option-list {
+    padding: 1em 0;
 }
 
 .signupform fieldset button {
