@@ -12,9 +12,11 @@
 
 .nine {
     position: relative;
+    min-height: 100vh;
     padding-left: 0;
     padding-right: 0;
     overflow-y: visible;
+    float: none;
 }
 
 
@@ -30,6 +32,7 @@
 .widget.content {
   overflow: inherit;
 }
+
 
 
 
@@ -50,9 +53,15 @@
 // Applies spacing to widgets to mimic container width
 .empty-zone,
 #page-zones__main:empty,
-#page-zones__main > .widget:not(.row) {
+#page-zones__main > .widget:not(.row), {
   margin-left: 4%;
   margin-right: 4%;
+}
+
+// Overrides sandbox spacing
+#page-zones__main .blogpostlist {
+  margin-left: 4% !important;
+  margin-right: 4% !important;
 }
 
 
